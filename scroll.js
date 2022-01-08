@@ -1,4 +1,3 @@
-<script>
 // z index change for the 'our services' section interactions
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -97,4 +96,3 @@ document.addEventListener('DOMContentLoaded', () => {
   });
  }); 
 });
-</script>
