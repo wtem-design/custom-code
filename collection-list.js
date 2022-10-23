@@ -1,4 +1,3 @@
-<script>
 gsap.registerPlugin(Flip);
 
 
@@ -40,4 +39,3 @@ $(".fullscreen-story_close-button").on("click", function () {
      gsap.to($(this).closest('.fullscreen-story_layer').find(".overflow-wrapper"), {opacity: 0, duration: 0.2});
      gsap.to($(this).closest('.fullscreen-story_layer').find('.fullscreen-story_outline'), {clearProps: true});
 });
-</script>
