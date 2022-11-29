@@ -1,4 +1,3 @@
-<script>
 var firstClick = true;
 
 let filterOpen = gsap.timeline({defaults:{ease:"Expo.easeOut", duration: 1}});
@@ -387,4 +386,3 @@ Fancybox.bind("[data-fancybox]", {
 $('.pagination_button').on('click', function() {
   lenis.scrollTo("#anchor", {easing: (x) => (x < 0.5 ? 8 * x * x * x * x : 1 - Math.pow(-2 * x + 2, 4) / 2)})
 });
-</script>
