@@ -8,17 +8,17 @@ $('#filter-button').click(function() {
      if(firstClick){
      	$(this).attr("aria-expanded","true")
       filterOpen.set(".filter-categories-wrapper", {display: "flex"})
-      			.to(".full-width", {height: "auto"})
+      		.fromTo(".full-width", {height: 0}, {height: "auto"})
             .fromTo(".gsap-stagger", {yPercent:-15, opacity: 0}, {yPercent:0, opacity: 1, stagger:0.07}, "<")
-            .to(".line-thin.filter", {width: "100%", backgroundColor: "#006aff"}, "<");
+            .fromTo(".line-thin.filter", {width: 150, backgroundColor: "##191919"}, {width: "100%", backgroundColor: "#006aff"}, "<");
                 
          firstClick = false;
      } else {
      	$(this).attr("aria-expanded","false")
-      filterClose.to(".full-width", {height: 0})
+      filterClose.fromTo(".full-width", {height: "auto"}, {height: 0})
         .fromTo(".gsap-stagger", {yPercent:0, opacity: 1}, {yPercent:-15, opacity: 0, stagger:{from: "end", each: 0.07}}, "<")
-        .to(".line-thin.filter", {width: 150, backgroundColor: "#191919"}, "<+0.1")
-        .to(".filter-categories-wrapper", {display: "none"});
+        .fromTo(".line-thin.filter", {width: "100%", backgroundColor: "#006aff"}, {width: 150, backgroundColor: "#191919"}, "<+0.1")
+        .set(".filter-categories-wrapper", {display: "none"});
         firstClick = true;
      }
 });   
