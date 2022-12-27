@@ -18,7 +18,7 @@ $('#filter-button').click(function() {
       filterClose.fromTo(".full-width", {height: "auto"}, {height: 0})
         .fromTo(".gsap-stagger", {yPercent:0, opacity: 1}, {yPercent:-15, opacity: 0, stagger:{from: "end", each: 0.07}}, "<")
         .fromTo(".line-thin.filter", {width: "100%", backgroundColor: "#006aff"}, {width: 150, backgroundColor: "#191919"}, "<+0.1")
-        .set(".filter-categories-wrapper", {display: "none"});
+
         firstClick = true;
      }
 });   
