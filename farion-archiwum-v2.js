@@ -1,29 +1,3 @@
-var firstClick = true;
-
-let filterOpen = gsap.timeline({defaults:{ease:"Expo.easeOut", duration: 1}});
-let filterClose = gsap.timeline({defaults:{ease:"Expo.easeOut", duration: 0.7}});
-
-$('#filter-button').click(function() {
-
-     if(firstClick){
-     	$(this).attr("aria-expanded","true")
-      filterOpen.set(".filter-categories-wrapper", {display: "flex"})
-      		.fromTo(".full-width", {height: 0}, {height: "auto"})
-          .fromTo(".gsap-stagger", {yPercent:-15, opacity: 0}, {yPercent:0, opacity: 1, stagger:0.07}, "<")
-          .fromTo(".line-thin.filter", {width: 150, backgroundColor: "##191919"}, {width: "100%", backgroundColor: "#006aff"}, "<");
-                
-         firstClick = false;
-     } else {
-     	$(this).attr("aria-expanded","false")
-      filterClose.to(".full-width", {height: 0})
-        .fromTo(".gsap-stagger", {yPercent:0, opacity: 1}, {yPercent:-15, opacity: 0, stagger:{from: "end", each: 0.07}}, "<")
-        .fromTo(".line-thin.filter", {width: "100%", backgroundColor: "#006aff"}, {width: 150, backgroundColor: "#191919"}, "<+0.1")
-        .set(".filter-categories-wrapper", {display: "none"});
-        firstClick = true;
-     }
-});
-
-
 document.addEventListener('keydown', function(event) {
   if (event.code == 'Escape') {
     $('.lightbox-form_close-button, .fullscreen-story_close-button').click();
