@@ -99,9 +99,9 @@
 .frc-button {
     cursor: pointer;
     padding: 2px 6px;
-    background-color: #f1f1f1;
-    border: 1px solid transparent;
-    text-align: center;
+    background-color: none;
+    border: 0px;
+    text-align: left;
     font-weight: 600;
     text-transform: none;
 }
