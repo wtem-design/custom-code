@@ -60,8 +60,7 @@
 
 .frc-banner {
     position: absolute;
-    top: 5px;
-    bottom: 0px;
+    bottom: -5px;
     right: 6px;
     line-height: 1;
 }
@@ -124,42 +123,6 @@
     font-size: 0.9em;
 }
 
-/* Dark theme */
-
-.dark.frc-captcha {
-    color: #fff;
-    background-color: #222;
-    border-color: #333;
-}
-
-.dark.frc-captcha * {
-    color: #fff;
-}
-
-.dark.frc-captcha button {
-    background-color: #444;
-}
-
-.dark .frc-icon {
-    fill: #fff;
-    stroke: #fff;
-}
-
-.dark .frc-progress {
-    background-color: #444;
-}
-
-.dark .frc-progress::-webkit-progress-bar {
-    background: #444;
-}
-
-.dark .frc-progress::-webkit-progress-value {
-    background: #ddd;
-}
-
-.dark .frc-progress::-moz-progress-bar {
-    background: #ddd;
-}
 
 @keyframes frc-fade-in {
     from {
