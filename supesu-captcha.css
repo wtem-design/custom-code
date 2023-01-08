@@ -1,13 +1,5 @@
-.frc-captcha {
-    position: relative;
-    min-width: 250px;
-    max-width: 312px;
-    border: 0px;
-    padding-bottom: 0px;
-    background-color: none;
-}
-
 .frc-captcha * {
+    /* Mostly a CSS reset so existing website styles don't clash */
     margin: 0;
     padding: 0;
     border: 0;
@@ -18,10 +10,22 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 1.2;
-    letter-spacing: 0,03em;
     text-decoration: none;
     background-color: initial;
     color: #222;
+}
+
+.frc-captcha {
+    position: relative;
+    min-width: 250px;
+    max-width: 312px;
+    border: 0px;
+    padding-bottom: 0px;
+    background-color: none;
+}
+
+.frc-captcha b {
+    font-weight: bold;
 }
 
 .frc-container {
@@ -52,7 +56,6 @@
     margin: 4px 6px 0 0;
     overflow-x: auto;
     flex-grow: 1;
-    font-color: ##233544;
 }
 
 .frc-banner {
@@ -75,22 +78,22 @@
     margin: 3px 0;
     height: 4px;
     border: none;
-    background-color: #eee;
-    color: #222;
+    background-color: none;
+    color: #233544;
     width: 100%;
     transition: all 0.5s linear;
 }
 
 .frc-progress::-webkit-progress-bar {
-    background: #eee;
+    background: none;
 }
 
 .frc-progress::-webkit-progress-value {
-    background: #222;
+    background: #233544;
 }
 
 .frc-progress::-moz-progress-bar {
-    background: #222;
+    background: #233544;
 }
 
 .frc-button {
@@ -118,4 +121,50 @@
 .frc-err-url {
     text-decoration: underline;
     font-size: 0.9em;
+}
+
+/* Dark theme */
+
+.dark.frc-captcha {
+    color: #fff;
+    background-color: #222;
+    border-color: #333;
+}
+
+.dark.frc-captcha * {
+    color: #fff;
+}
+
+.dark.frc-captcha button {
+    background-color: #444;
+}
+
+.dark .frc-icon {
+    fill: #fff;
+    stroke: #fff;
+}
+
+.dark .frc-progress {
+    background-color: #444;
+}
+
+.dark .frc-progress::-webkit-progress-bar {
+    background: #444;
+}
+
+.dark .frc-progress::-webkit-progress-value {
+    background: #ddd;
+}
+
+.dark .frc-progress::-moz-progress-bar {
+    background: #ddd;
+}
+
+@keyframes frc-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
