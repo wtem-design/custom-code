@@ -60,6 +60,7 @@
 
 .frc-banner {
     position: absolute;
+    top: 5px;
     bottom: 0px;
     right: 6px;
     line-height: 1;
@@ -98,7 +99,7 @@
 
 .frc-button {
     cursor: pointer;
-    padding: 2px 6px;
+    padding: 2px 0px;
     background-color: none;
     border: 0px;
     text-align: left;
