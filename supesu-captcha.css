@@ -31,8 +31,8 @@
 }
 
 .frc-icon {
-    fill: #222;
-    stroke: #222;
+    fill: #233544;
+    stroke: #233544;
     flex-shrink: 0;
     margin: 8px 8px 0 8px;
 }
@@ -52,6 +52,7 @@
     margin: 4px 6px 0 0;
     overflow-x: auto;
     flex-grow: 1;
+    font-color: ##233544;
 }
 
 .frc-banner {
