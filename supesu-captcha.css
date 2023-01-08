@@ -1,0 +1,8 @@
+.frc-captcha {
+    position: relative;
+    min-width: 250px;
+    max-width: 312px;
+    border: 0px;
+    padding-bottom: 0px;
+    background-color: none;
+}
