@@ -37,28 +37,43 @@ $(".opis-icon").on("click", function () {
 });
 
 
-$(".fullscreen-story_close-button").on("click", function () {
-	lenis.start();
-  let popUp = $(this).closest('.fullscreen-story_layer');
-  let state = Flip.getState(".opis-icon.invisible");
+function closeFullscreenStory() {
+    lenis.start();
 
-  $(".opis-icon.invisible").removeClass("invisible");
-  $(".opis-icon").addClass("visible");
-  Flip.to(state, {
-       targets: popUp.find('.fullscreen-story_outline'),
-       duration: 0.5,
-       fade: true,
-       absolute: true,
-       ease: "Expo.easeInOut"
-  });
-  setTimeout(function() {
-       popUp.removeClass("visible");
-  }, 480);
-  gsap.to(popUp.find(".fullscreen-story_backdrop"), {opacity: 0, duration: 0.5});
-  gsap.to(popUp.find(".overflow-wrapper"), {opacity: 0, duration: 0.2});
-  gsap.fromTo(popUp.find(".fullscreen-story_close-button, .fullscreen-story_gradient-overlay"), {opacity: 1}, {opacity: 0});
-  gsap.to(popUp.find('.fullscreen-story_outline'), {clearProps: true});
-});
+    let popUp = document.querySelector(".fullscreen-story_close-button").closest('.fullscreen-story_layer');
+    let state = Flip.getState(".opis-icon.invisible");
+
+    document.querySelectorAll(".opis-icon.invisible").forEach(icon => {
+        icon.classList.remove("invisible");
+        icon.classList.add("visible");
+    });
+
+    Flip.to(state, {
+        targets: popUp.querySelector('.fullscreen-story_outline'),
+        duration: 0.5,
+        fade: true,
+        absolute: true,
+        ease: "Expo.easeInOut"
+    });
+
+    setTimeout(function() {
+        popUp.classList.remove("visible");
+    }, 480);
+
+    gsap.to(popUp.querySelector(".fullscreen-story_backdrop"), { opacity: 0, duration: 0.5 });
+    gsap.to(popUp.querySelector(".overflow-wrapper"), { opacity: 0, duration: 0.2 });
+    gsap.fromTo(
+        popUp.querySelectorAll(".fullscreen-story_close-button, .fullscreen-story_gradient-overlay"), 
+        { opacity: 1 }, 
+        { opacity: 0 }
+    );
+    gsap.to(popUp.querySelector('.fullscreen-story_outline'), { clearProps: "all" });
+}
+
+
+document.querySelector(".fullscreen-story_close-button").addEventListener("click", closeFullscreenStory);
+document.querySelector(".fullscreen-story_close-area").addEventListener("click", closeFullscreenStory);
+
 
 	$('.lightbox-link').each(function(){
 	var x = $(this).find('.hidden_data_value_class').text();
