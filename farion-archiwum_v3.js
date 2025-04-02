@@ -176,7 +176,7 @@ Fancybox.bind("[data-fancybox]", {
 document.addEventListener('keydown', function(event) {
   if (event.code == 'Escape') {
     $('.lightbox-form_close-button').click();
-    $(body).css('overflow','auto')
+    $('body').css('overflow','auto')
   }
 });
 
